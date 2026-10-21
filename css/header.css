@@ -5,30 +5,55 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+body {
+  font-family: "Montserrat";
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  margin-right: 120px;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-}
-
-.link {
-  font-family: "Montserrat";
-  color: var(--text-secondary-color);
-  font-weight: var(--menu-text-weight);
-  text-decoration: none;
-  margin: 0 40px;
+  display: none;
 }
 
 .logo {
   display: inline-block;
   width: 68px;
   height: 64px;
-  margin-left: 120px;
+  margin-left: 48px;
+}
+
+input[type="checkbox"]:checked ~ nav {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-tertiary-color);
+}
+
+.navigation-menu {
+  margin-right: 48px;
+  display: flex;
+}
+
+.navigation-menu,
+.navigation-menu label,
+.menuMobileAncho {
+  height: 16px;
+}
+
+.list-links {
+  list-style: none;
+}
+
+.list-links li {
+  color: var(--text-secondary-color);
+  margin: 16px 0;
+}
+
+.link {
+  color: var(--text-secondary-color);
+  font-weight: var(--menu-text-weight);
+  text-decoration: none;
 }
