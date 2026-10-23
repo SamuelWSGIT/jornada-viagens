@@ -1,0 +1,37 @@
+.categorias-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.categoria {
+  width: 312px;
+  height: 220px;
+  background-color: var(--background-secondary-color);
+  border-radius: 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.categoria img {
+  padding-top: 41px;
+}
+
+.categoria h3 {
+  color: var(--text-primary-color);
+  font-weight: var(--title-weight);
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .categorias-cards {
+    flex-direction: initial;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
