@@ -55,6 +55,8 @@
 
 @media screen and (min-width: 768px) {
   .offers-cards {
+    width: 768px;
+    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,11 +76,20 @@
   .card header span {
     font-size: 40px;
   }
+
+  .offers-cards {
+    width: 1024px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1444px) {
   .card {
     width: 588px;
+  }
+  .offers-cards {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
