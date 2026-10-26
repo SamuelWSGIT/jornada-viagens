@@ -5,7 +5,7 @@
 }
 
 .hero h2 {
-  padding: 88px 24px 0;
+  padding: 88px 24px;
   margin: 0px;
   font-weight: var(--text-weight);
   font-size: 20px;
