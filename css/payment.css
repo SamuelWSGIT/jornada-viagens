@@ -1,0 +1,146 @@
+/* =====================================
+   CONDIÇÕES DE PAGAMENTO
+   MOBILE FIRST - 360px
+===================================== */
+
+.payment-conditions {
+  margin: 0px 24px;
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+}
+
+/* Título principal */
+.payment-conditions .section-title h2 {
+  max-width: 280px;
+  margin-inline: auto;
+  line-height: 1.2;
+}
+
+/* Layout principal */
+.payment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+/* Conteúdo */
+.payment-content h3 {
+  max-width: 280px;
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: var(--title-weight);
+  line-height: 1.25;
+}
+
+.payment-content p {
+  margin: 20px 0 0;
+
+  font-size: 16px;
+  font-weight: var(--text-weight);
+  line-height: 1.6;
+}
+
+/* Galeria */
+.payment-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* Duas primeiras imagens */
+.payment-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 7;
+  object-fit: cover;
+}
+
+/* Terceira imagem */
+.payment-image-wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+/* =====================================
+   TABLET - 768px
+===================================== */
+
+@media screen and (min-width: 768px) {
+  .payment-conditions {
+    margin: 0 48px;
+  }
+
+  .payment-conditions .section-title h2 {
+    max-width: none;
+  }
+
+  .payment-layout {
+    max-width: 560px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .payment-content h3 {
+    max-width: none;
+  }
+
+  .payment-gallery {
+    gap: 16px;
+  }
+
+  .payment-image {
+    aspect-ratio: 6 / 5;
+  }
+
+  .payment-image-wide {
+    aspect-ratio: 18 / 5;
+  }
+}
+
+/* =====================================
+   DESKTOP - 1440px
+===================================== */
+
+@media screen and (min-width: 1200px) {
+  .payment-conditions {
+    margin: 0 24px;
+  }
+
+  .payment-layout {
+    max-width: 1160px;
+
+    grid-template-columns:
+      minmax(0, 344px)
+      minmax(0, 1fr);
+
+    align-items: start;
+    gap: 48px;
+  }
+
+  .payment-content h3 {
+    max-width: 270px;
+  }
+
+  .payment-content p {
+    max-width: 300px;
+  }
+
+  .payment-gallery {
+    gap: 20px;
+  }
+
+  .payment-image {
+    aspect-ratio: 3 / 2;
+  }
+
+  .payment-image-wide {
+    aspect-ratio: 4.35 / 1;
+  }
+}
