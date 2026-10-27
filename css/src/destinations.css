@@ -1,0 +1,18 @@
+/* DESTINOS POPULARES */
+.destinations { margin-inline: 24px; background: var(--background-primary-color); }
+.destinations__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; }
+.destination-card { display: flex; flex-direction: column; min-width: 0; }
+.destination-card__image { display: block; width: 100%; height: auto; aspect-ratio: 8 / 9; object-fit: cover; }
+.destination-card__content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding-top: 16px; }
+.destination-card__content p { flex: 1; margin: 12px 0 20px; }
+.destination-card__button { display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; line-height: 1.2; }
+@media (min-width: 768px) {
+  .destinations { margin-inline: 56px; }
+  .destinations__grid { max-width: 656px; margin-inline: auto; gap: 40px; }
+  .destination-card__image { aspect-ratio: 13 / 9; }
+}
+@media (min-width: 1200px) {
+  .destinations { margin-inline: 120px; }
+  .destinations__grid { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .destination-card__image { aspect-ratio: 13 / 10; }
+}
