@@ -1,0 +1,133 @@
+/* CABEÇALHO: estilos específicos para não afetar outros elementos. */
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 138px;
+  background: var(--background-tertiary-color);
+}
+
+.site-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 68px;
+  height: 64px;
+  margin-left: 48px;
+}
+
+.site-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.site-nav {
+  margin-right: 48px;
+}
+
+/* O input não é removido da navegação por teclado. */
+.site-nav__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Área de toque com tamanho confortável (44 x 44px). */
+.site-nav__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.site-nav__toggle img {
+  display: block;
+  width: 24px;
+  height: 16px;
+}
+
+.site-nav__checkbox:focus-visible + .site-nav__toggle {
+  outline: 3px solid var(--text-secondary-color);
+  outline-offset: 3px;
+}
+
+.site-nav__links {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 16px 48px;
+  list-style: none;
+  background: var(--background-tertiary-color);
+}
+
+/* Checkbox e links são irmãos dentro do nav. */
+.site-nav__checkbox:checked ~ .site-nav__links {
+  display: block;
+}
+
+.site-nav__links li {
+  margin: 16px 0;
+}
+.site-nav__links a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+}
+.site-nav__links a:hover {
+  text-decoration: underline;
+}
+.site-nav__links a:focus-visible {
+  outline: 3px solid var(--text-secondary-color);
+  outline-offset: 3px;
+}
+
+/* O menu compacto permanece ativo até 1023px (mobile e tablet). */
+@media (min-width: 1024px) {
+  .site-nav__checkbox,
+  .site-nav__toggle {
+    display: none;
+  }
+
+  .site-nav__links,
+  .site-nav__checkbox:checked ~ .site-nav__links {
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: space-between;
+    width: 467px;
+    padding: 0;
+    background: none;
+  }
+
+  .site-nav__links li {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-logo {
+    width: 260px;
+  }
+  .site-nav {
+    margin-right: clamp(48px, 11.67vw, 168px);
+  }
+  .site-nav__links a:hover {
+    color: var(--primary-color);
+  }
+}

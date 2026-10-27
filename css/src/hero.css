@@ -1,0 +1,12 @@
+/* HERO */
+.hero__image { height: 400px; background: url("../../img/hero-mobile.jpg") center / cover no-repeat; }
+.hero__text { padding: 88px 24px; }
+@media (min-width: 768px) {
+  .hero__image { height: 620px; background-image: url("../../img/hero-tablet.jpg"); }
+  .hero__text { padding: 88px 60px; }
+}
+@media (min-width: 1024px) {
+  .hero__image { background-image: url("../../img/hero-desktop-v2.jpg"); }
+  .hero__text { padding-inline: 120px; }
+}
+@media (min-width: 1920px) { .hero__text { padding-inline: 160px; } }
