@@ -1,6 +1,5 @@
 /* CONDIÇÕES DE PAGAMENTO */
 .payment {
-  margin-inline: 24px;
   background: var(--background-primary-color);
 }
 .payment > .section-heading {
@@ -39,9 +38,6 @@
   aspect-ratio: 16 / 9;
 }
 @media (min-width: 768px) {
-  .payment {
-    margin-inline: 60px;
-  }
   .payment > .section-heading {
     max-width: none;
   }
@@ -62,9 +58,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .payment {
-    margin-inline: 120px;
-  }
   .payment__layout {
     max-width: 1160px;
     grid-template-columns: minmax(0, 344px) minmax(0, 1fr);

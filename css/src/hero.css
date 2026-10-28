@@ -1,12 +1,21 @@
 /* HERO */
-.hero__image { height: 400px; background: url("../../img/hero-mobile.jpg") center / cover no-repeat; }
-.hero__text { padding: 88px 24px; }
+.hero__image {
+  height: 400px;
+  background: url("../../img/hero-mobile.jpg") center / cover no-repeat;
+}
+.hero__text {
+  width: calc(100% - 2 * var(--section-gutter));
+  max-width: var(--section-max-width);
+  margin: 80px auto var(--section-gap);
+}
 @media (min-width: 768px) {
-  .hero__image { height: 620px; background-image: url("../../img/hero-tablet.jpg"); }
-  .hero__text { padding: 88px 60px; }
+  .hero__image {
+    height: 620px;
+    background-image: url("../../img/hero-tablet.jpg");
+  }
 }
 @media (min-width: 1024px) {
-  .hero__image { background-image: url("../../img/hero-desktop-v2.jpg"); }
-  .hero__text { padding-inline: 120px; }
+  .hero__image {
+    background-image: url("../../img/hero-desktop-v2.jpg");
+  }
 }
-@media (min-width: 1920px) { .hero__text { padding-inline: 160px; } }
