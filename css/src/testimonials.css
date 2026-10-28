@@ -51,12 +51,21 @@
   min-width: 0;
 }
 
+.profile-content h4 {
+  margin: 0;
+}
+
 .rating {
   display: flex;
   gap: 4px;
   color: var(--secondary-color);
   white-space: nowrap;
   line-height: 1;
+}
+
+.rating .star{
+  width: 26px;
+  height: 26px;
 }
 
 /* Nome e estrelas usam os tamanhos do CSS global. */

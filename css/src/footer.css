@@ -1,0 +1,161 @@
+/* =====================================
+   FOOTER
+   MOBILE FIRST - 360px
+===================================== */
+
+/* Imagem principal */
+.site-footer__image {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  background: url(../../img/footer-mobile.png) center / cover no-repeat;
+}
+
+/* Conteúdo do rodapé */
+.site-footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  padding: 32px 20px 36px;
+  background-color: var(--background-tertiary-color);
+  color: var(--text-secondary-color);
+  text-align: center;
+}
+
+/* Informações da agência */
+.site-footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-footer__logo {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+/* Textos */
+.site-footer__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 24px;
+}
+
+.site-footer__details p {
+  margin: 0;
+  font-size: var(--font-size-text);
+  font-weight: var(--text-weight);
+  line-height: 1.5;
+}
+
+/* Redes sociais */
+.site-footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__social p {
+  margin: 0;
+  font-size: var(--font-size-small);
+  font-weight: var(--text-weight);
+}
+
+/* Lista de ícones */
+.site-footer__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+}
+
+.site-footer__social-list img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.site-footer__social-list .twitter {
+  display: block;
+  width: 29px;
+  height: 24px;
+}
+
+/* Acessibilidade */
+.site-footer__social-list a:focus-visible {
+  outline: 2px solid var(--text-secondary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* =====================================
+   TABLET - 768px
+===================================== */
+
+@media screen and (min-width: 768px) {
+  .site-footer__image {
+    height: 340px;
+    background: url(../../img/footer-tablet.png) center / cover no-repeat;
+  }
+
+  .site-footer__content {
+    gap: 20px;
+    padding: 28px 32px 36px;
+  }
+}
+
+/* =====================================
+   DESKTOP - 1440px
+===================================== */
+
+@media screen and (min-width: 1200px) {
+  .site-footer__image {
+    height: 500px;
+    background: url(../../img/footer-desktop.png) center / cover no-repeat;
+  }
+
+  .site-footer__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 40px 100px;
+    text-align: left;
+  }
+
+  .site-footer__info {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .site-footer__social {
+    align-items: center;
+    text-align: right;
+  }
+
+  .site-footer__details{
+    margin: 0 0;
+  }
+}
