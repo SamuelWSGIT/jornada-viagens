@@ -98,7 +98,7 @@
 }
 
 /* O menu compacto permanece ativo até 1023px (mobile e tablet). */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .site-nav__checkbox,
   .site-nav__toggle {
     display: none;
