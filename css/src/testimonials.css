@@ -1,167 +1,86 @@
-/* =====================================
-   DEPOIMENTOS
-   MOBILE FIRST - 360px
-===================================== */
-
-.testimonials {
-  margin: 0 24px;
-  background-color: var(--background-primary-color);
-  color: var(--text-primary-color);
-}
-
-/* Título da seção */
-.testimonials .section-heading {
-  margin-bottom: 32px;
-}
-
-/* Organização dos depoimentos */
+/* DEPOIMENTOS: largura e margens são definidas por .section no global.css */
 .testimonials-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 32px;
-
   width: 100%;
-  max-width: 1240px;
-  margin-inline: auto;
 }
 
-/* Estrutura dos depoimentos */
 .testimonials-layout article {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-/* Comentários */
+/* Limita os seletores para não alterar o cabeçalho do site. */
 .testimonials-layout article > header {
   display: block;
   position: static;
   width: auto;
   height: auto;
-  min-height: 0;
   margin: 0 0 12px;
   padding: 0;
-  background: transparent;
+  background: none;
   color: inherit;
 }
 
 .testimonials-layout article > header p {
-  margin: 0;
-  font-size: var(--font-size-text, 16px);
-  font-weight: var(--text-weight);
   line-height: 1.7;
 }
 
-/* Perfil do cliente */
 .testimonials-layout article > footer {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Avatar */
 .testimonials-layout footer img {
   display: block;
   width: 64px;
   height: 64px;
-  flex-shrink: 0;
-
+  flex: 0 0 auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* Nome e avaliação */
 .profile-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 0;
   gap: 8px;
+  min-width: 0;
 }
 
-.profile-content h4 {
-  margin: 0;
-  font-size: var(--font-size-testimonial-name);
-  font-weight: var(--title-weight);
-  line-height: 1.2;
-}
-
-/* Estrelas */
 .rating {
   display: flex;
-  align-items: center;
   gap: 4px;
   color: var(--secondary-color);
   white-space: nowrap;
-}
-
-.star {
-  font-size: var(--font-size-testimonial-stars);
   line-height: 1;
 }
 
-/* =====================================
-   TABLET - 768px
-===================================== */
+/* Nome e estrelas usam os tamanhos do CSS global. */
+.testimonials__name {
+  margin: 0;
+}
+.testimonials__stars {
+  line-height: 1;
+}
 
-@media screen and (min-width: 768px) {
-  .testimonials {
-    margin: 0 auto;
-    max-width: 560px;
-  }
-
+@media (min-width: 768px) {
   .testimonials-layout {
     gap: 28px;
   }
-
   .testimonials-layout article > footer {
     gap: 20px;
   }
-
   .testimonials-layout footer img {
     width: 72px;
     height: 72px;
   }
 }
 
-/* =====================================
-   Laptop - 1024px
-===================================== */
-
-@media screen and (min-width: 1024px) {
-  .testimonials {
-    margin: 0 auto;
-    max-width: 560px;
-  }
-
-  .testimonials-layout {
-    gap: 28px;
-  }
-
-  .testimonials-layout article > footer {
-    gap: 20px;
-  }
-
-  .testimonials-layout footer img {
-    width: 72px;
-    height: 72px;
-  }
-}
-
-/* =====================================
-   DESKTOP - 1440px
-===================================== */
-
-@media screen and (min-width: 1200px) {
-  .testimonials {
-    margin: 0 120px;
-    max-width: none;
-  }
-
-  .testimonials .section-heading {
-    margin-bottom: 64px;
-  }
-
+@media (min-width: 1200px) {
   .testimonials-layout {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px;
@@ -171,7 +90,6 @@
     width: 86px;
     height: 86px;
   }
-
   .profile-content {
     gap: 12px;
   }

@@ -1,5 +1,10 @@
 /* OFERTAS */
-.offers__grid { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.offers__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 .offer-card {
   width: min(312px, 100%);
   min-height: 288px;
@@ -12,25 +17,60 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.offer-card__info { min-height: 138px; margin-bottom: 24px; }
-.offer-card__info h3 { margin-top: 8px; }
-.offer-card__info h3 span { display: block; margin-top: 24px; }
-.offer-card .button { max-width: 100%; }
-.offer-card .button:focus-visible { outline-color: #fff; }
-.offer-card--japan { background-image: url("../../img/bg-card-japao.jpg"); }
-.offer-card--san-andreas { background-image: url("../../img/bg-card-sanAndreas.jpg"); }
-.offer-card--paraiba { background-image: url("../../img/bg-card-paraíba.jpg"); }
-.offer-card--manaus { background-image: url("../../img/bg-card-manaus.jpg"); }
+.offer-card__info {
+  min-height: 138px;
+  margin-bottom: 24px;
+}
+.offer-card__info h3 {
+  margin-top: 8px;
+}
+.offer-card__info h3 span {
+  display: block;
+  margin-top: 24px;
+}
+.offer-card .button {
+  max-width: 100%;
+}
+.offer-card .button:focus-visible {
+  outline-color: #fff;
+}
+.offer-card--japan {
+  background-image: url("../../img/bg-card-japao.jpg");
+}
+.offer-card--san-andreas {
+  background-image: url("../../img/bg-card-sanAndreas.jpg");
+}
+.offer-card--paraiba {
+  background-image: url("../../img/bg-card-paraíba.jpg");
+}
+.offer-card--manaus {
+  background-image: url("../../img/bg-card-manaus.jpg");
+}
 
 @media (min-width: 768px) {
-  .offers__grid { flex-direction: row; flex-wrap: wrap; justify-content: center; width: min(100%, 768px); margin-inline: auto; }
+  .offers__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: min(100%, 768px);
+    margin-inline: auto;
+  }
 }
 @media (min-width: 1024px) {
-  .offer-card { width: 420px; min-height: 308px; }
-  .offers__grid { width: min(100%, 1024px); }
+  .offer-card {
+    width: 420px;
+    min-height: 308px;
+  }
+  .offers__grid {
+    width: min(100%, 1024px);
+  }
 }
-@media (min-width: 1444px) {
-  .offer-card { width: 588px; }
-  .offers__grid { width: 100%; }
+@media (min-width: 1200px) {
+  .offer-card {
+    width: calc((100% - 24px) / 2);
+    max-width: 588px;
+  }
+  .offers__grid {
+    width: 100%;
+  }
 }
-@media (min-width: 1920px) { .offers__grid { width: 1250px; } }
